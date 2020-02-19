@@ -1,7 +1,7 @@
 module.exports = function getSeason(date) {
     if (date === undefined) return 'Unable to determine the time of year!';
 
-    if (!Date.prototype.isPrototypeOf(date)) throw Error('Error');
+    if (!Date.prototype.isPrototypeOf(date)) throw new Error('Error');
 
     const month = date.getUTCMonth();
     switch (month) {
